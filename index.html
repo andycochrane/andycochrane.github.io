@@ -7,39 +7,55 @@
     <title>Andy Cochrane — Front-end Developer in Leeds</title>
 
     <style>
-        html {
-            -webkit-box-sizing: border-box;
-               -moz-box-sizing: border-box;
-                    box-sizing: border-box;
-        }
 
         *,
         *:before,
         *:after {
+            margin:  0;
+            padding: 0;
             -webkit-box-sizing: inherit;
                -moz-box-sizing: inherit;
                     box-sizing: inherit;
         }
 
-        * {
-            margin:  0;
-            padding: 0;
-        }
-
         html {
-            background-color: #f5f6f7;
-            color: #333;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             font-size: 100%;
             line-height: 1.5;
+            background-color: #f5f6f7;
+            color: #333;
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
         }
 
         h1, h2, h3, h4, h5, h6,
-        p {
+        p,
+        ul, ol, dl {
             margin-bottom: 1.5rem;
         }
 
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 1.333333333;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            line-height: 1.714285714;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1;
+        }
+
         img {
+            max-width: 100%;
+            font-style: italic;
             vertical-align: middle;
         }
 
@@ -69,7 +85,30 @@
 
             @media screen and (min-width: 45em) {
                 .c-clients__logo {
-                height: 48px;
+                    height: 48px;
+                }
+            }
+
+        .c-feature-list {
+            list-style: none;
+            column-count: 2;
+        }
+
+            /**
+             * 1. Using CSS Columns causes borders to split across columns
+             *    separately to their text. The `display: inline-block`
+             *    workaround fixes this.
+             */
+            .c-feature-list__item {
+                display: inline-block; /* [1] */
+                width: 100%; /* [1] */
+                padding: 6px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            @media screen and (min-width: 45em) {
+                .c-feature-list {
+                    column-count: 3;
                 }
             }
 
@@ -92,7 +131,7 @@
 
             <p>Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
 
-            <p>I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors.</p>
+            <p>I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors. </p>
 
             <section class="c-clients">
                 <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
@@ -105,12 +144,17 @@
         </section>
 
         <section class="c-band  c-band--dark">
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>Git</li>
-                <li>Etc…</li>
+            <h2>Skills and Technologies</h2>
+            <ul class="c-feature-list">
+                <li class="c-feature-list__item">HTML</li>
+                <li class="c-feature-list__item">(S)CSS</li>
+                <li class="c-feature-list__item">JS</li>
+                <li class="c-feature-list__item">PHP</li>
+                <li class="c-feature-list__item">npm</li>
+                <li class="c-feature-list__item">Gulp</li>
+                <li class="c-feature-list__item">Blade</li>
+                <li class="c-feature-list__item">Git</li>
+                <li class="c-feature-list__item">More…</li>
             </ul>
         </section>
 
