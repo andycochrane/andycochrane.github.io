@@ -8,6 +8,19 @@
 
     <style>
 
+        /* SETTINGS*/
+
+        :root {
+            --color-brand: #1b4a4a;
+            --ratio: 1.5;
+        }
+
+
+
+
+
+        /* GENERIC */
+
         *,
         *:before,
         *:after {
@@ -18,21 +31,36 @@
                     box-sizing: inherit;
         }
 
+        h1, h2, h3, h4, h5, h6,
+        p,
+        ul, ol, dl {
+            margin-bottom: calc(var(--ratio) * 1rem);
+        }
+
+
+
+
+
+        /* ELEMENTS */
+
         html {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             font-size: 100%;
-            line-height: 1.5;
+            line-height: var(--ratio);
+            min-height: 100%;
             background-color: #f5f6f7;
             color: #333;
+            border-top: 12px solid var(--color-brand);
             -webkit-box-sizing: border-box;
                -moz-box-sizing: border-box;
                     box-sizing: border-box;
         }
 
-        h1, h2, h3, h4, h5, h6,
-        p,
-        ul, ol, dl {
-            margin-bottom: 1.5rem;
+        @media screen and (min-width: 45em) {
+            html {
+                border-left: 12px solid var(--color-brand);
+                border-top: 0;
+            }
         }
 
         h1 {
@@ -60,17 +88,35 @@
         }
 
         a {
-            color: #1b4a4a;
+            color: var(--color-brand);
         }
 
+
+
+
+
+        /* COMPONENTS */
+
         .c-band {
-            padding: 1.5rem;
+            padding: calc(var(--ratio) * 1rem);
         }
 
         .c-band--dark {
-            background-color: #1b4a4a;
             color: #f5f6f7;
+            background-color: #1b4a4a;
         }
+
+        /**
+         * Make double sure we can use CSS vars here: if not, non-supportive
+         * browsers will get no visible text at all.
+         */
+        @supports (--foo: bar) {
+            .c-band--dark {
+                background-color: var(--color-brand);
+            }
+        }
+
+
 
         .c-clients {
             text-align: center;
@@ -89,9 +135,17 @@
                 }
             }
 
+
+
         .c-feature-list {
             list-style: none;
             column-count: 2;
+        }
+
+        @media screen and (min-width: 45em) {
+            .c-feature-list {
+                column-count: 3;
+            }
         }
 
             /**
@@ -104,12 +158,6 @@
                 width: 100%; /* [1] */
                 padding: 6px 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-
-            @media screen and (min-width: 45em) {
-                .c-feature-list {
-                    column-count: 3;
-                }
             }
 
     </style>
