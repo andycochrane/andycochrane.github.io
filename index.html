@@ -33,7 +33,8 @@
 
         h1, h2, h3, h4, h5, h6,
         p,
-        ul, ol, dl {
+        ul, ol, dl,
+        .c-clients {
             margin-bottom: calc(var(--ratio) * 1rem);
         }
 
@@ -48,6 +49,7 @@
             font-size: 100%;
             line-height: var(--ratio);
             min-height: 100%;
+            overflow-y: scroll;
             background-color: #f5f6f7;
             color: #333;
             border-top: 12px solid var(--color-brand);
@@ -95,6 +97,20 @@
 
 
 
+        /* OBJECTS */
+
+        .o-wrapper {
+            max-width: 70em;
+            padding-right: calc(var(--ratio) * 1rem);
+            padding-left:  calc(var(--ratio) * 1rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+
+
+
+
         /* COMPONENTS */
 
         .c-band {
@@ -114,6 +130,12 @@
             .c-band--dark {
                 background-color: var(--color-brand);
             }
+        }
+
+        .c-band--masthead {
+            padding-top: calc(var(--ratio) * 2rem);
+            padding-bottom: calc(var(--ratio) * 2rem);
+            text-align: center;
         }
 
 
@@ -157,8 +179,21 @@
                 display: inline-block; /* [1] */
                 width: 100%; /* [1] */
                 padding: 6px 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
+
+            .c-band--dark .c-feature-list__item {
+                border-bottom-color: rgba(255, 255, 255, 0.1);
+            }
+
+
+
+        .c-heading-sub {
+            font-size: 1.5rem;
+            line-height: 1;
+            font-family: Palatino, Georgia, serif;
+            font-style: italic;
+        }
 
     </style>
 
@@ -170,37 +205,72 @@
 
     <main>
 
+        <section class="c-band  c-band--dark  c-band--masthead">
+
+            <div class="o-wrapper">
+
+                <h1>Andy Cochrane — Front-end Developer</h1>
+
+                <p class="c-heading-sub">Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
+
+                <p class="c-heading-sub">I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors. </p>
+
+            </div>
+
+        </section>
+
         <section class="c-band">
 
-            <h1>Andy Cochrane — Front-end Developer</h1>
+            <div class="o-wrapper">
 
-            <p>Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
+                <h2>Clients</h2>
 
-            <p>I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors. </p>
+                <p>I’ve been lucky enough to work with some amazing people…</p>
 
-            <section class="c-clients">
-                <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
-                <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="Arriva" />
-                <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="easyGym" />
-                <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="University College London" />
-                <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
-            </section>
+                <div class="c-clients">
+                    <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
+                    <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="Arriva" />
+                    <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="easyGym" />
+                    <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="University College London" />
+                    <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
+                </div>
+
+                <ul class="c-feature-list">
+                    <li class="c-feature-list__item">HTML</li>
+                    <li class="c-feature-list__item">(S)CSS</li>
+                    <li class="c-feature-list__item">JS</li>
+                    <li class="c-feature-list__item">PHP</li>
+                    <li class="c-feature-list__item">npm</li>
+                    <li class="c-feature-list__item">Gulp</li>
+                    <li class="c-feature-list__item">Blade</li>
+                    <li class="c-feature-list__item">Git</li>
+                    <li class="c-feature-list__item">More…</li>
+                </ul>
+
+            </div>
 
         </section>
 
         <section class="c-band  c-band--dark">
-            <h2>Skills and Technologies</h2>
-            <ul class="c-feature-list">
-                <li class="c-feature-list__item">HTML</li>
-                <li class="c-feature-list__item">(S)CSS</li>
-                <li class="c-feature-list__item">JS</li>
-                <li class="c-feature-list__item">PHP</li>
-                <li class="c-feature-list__item">npm</li>
-                <li class="c-feature-list__item">Gulp</li>
-                <li class="c-feature-list__item">Blade</li>
-                <li class="c-feature-list__item">Git</li>
-                <li class="c-feature-list__item">More…</li>
-            </ul>
+
+            <div class="o-wrapper">
+
+                <h2>Skills and Technologies</h2>
+
+                <ul class="c-feature-list">
+                    <li class="c-feature-list__item">HTML</li>
+                    <li class="c-feature-list__item">(S)CSS</li>
+                    <li class="c-feature-list__item">JS</li>
+                    <li class="c-feature-list__item">PHP</li>
+                    <li class="c-feature-list__item">npm</li>
+                    <li class="c-feature-list__item">Gulp</li>
+                    <li class="c-feature-list__item">Blade</li>
+                    <li class="c-feature-list__item">Git</li>
+                    <li class="c-feature-list__item">More…</li>
+                </ul>
+
+            </div>
+
         </section>
 
     </main>
