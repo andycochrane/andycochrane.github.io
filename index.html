@@ -28,7 +28,14 @@
 
         html {
             background-color: #f5f6f7;
-            font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 100%;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        p {
+            margin-bottom: 1.5rem;
         }
 
         img {
@@ -41,10 +48,13 @@
 
         .c-clients {
             text-align: center;
+            font-size: 0;
         }
 
             .c-clients__logo {
                 height: 36px;
+                display: inline-block;
+                margin: 0.75rem;
             }
 
             @media screen and (min-width: 45em) {
@@ -63,16 +73,24 @@
     <link rel="manifest" href="/manifest.json" />
 </head>
 <body>
+
     <main>
+
         <h1>Andy Cochrane — Front-end Developer</h1>
-        <p>Hi there, I'm Andy, a performance-led front-end developer from Leeds, UK. I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors.</p>
+
+        <p>Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
+
+        <p>I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors.</p>
+
         <section class="c-clients">
-            <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="" />
-            <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="" />
-            <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="" />
-            <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="" />
-            <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="" />
+            <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
+            <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="Arriva" />
+            <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="easyGym" />
+            <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="University College London" />
+            <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
         </section>
+
     </main>
+
 </body>
 </html>
