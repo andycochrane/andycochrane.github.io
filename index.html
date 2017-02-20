@@ -28,6 +28,7 @@
 
         html {
             background-color: #f5f6f7;
+            color: #333;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             font-size: 100%;
             line-height: 1.5;
@@ -43,7 +44,16 @@
         }
 
         a {
-            color: #173f3f;
+            color: #1b4a4a;
+        }
+
+        .c-band {
+            padding: 1.5rem;
+        }
+
+        .c-band--dark {
+            background-color: #1b4a4a;
+            color: #f5f6f7;
         }
 
         .c-clients {
@@ -69,28 +79,32 @@
     <link rel="apple-touch-icon-precomposed" href="icon.png" />
     <meta name="apple-mobile-web-app-title" content="" />
     <link type="text/plain" rel="author" href="humans.txt" />
-    <meta name="theme-color" content="#173f3f" />
+    <meta name="theme-color" content="#1b4a4a" />
     <link rel="manifest" href="/manifest.json" />
 </head>
 <body>
 
     <main>
 
-        <h1>Andy Cochrane — Front-end Developer</h1>
+        <section class="c-band">
 
-        <p>Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
+            <h1>Andy Cochrane — Front-end Developer</h1>
 
-        <p>I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors.</p>
+            <p>Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
 
-        <section class="c-clients">
-            <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
-            <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="Arriva" />
-            <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="easyGym" />
-            <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="University College London" />
-            <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
+            <p>I work with talented designers and developers to produce fast, responsive websites and applications for companies from all sectors.</p>
+
+            <section class="c-clients">
+                <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
+                <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="Arriva" />
+                <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="easyGym" />
+                <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="University College London" />
+                <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
+            </section>
+
         </section>
 
-        <section>
+        <section class="c-band  c-band--dark">
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
