@@ -138,17 +138,20 @@
             font-size: 0;
         }
 
-            .c-clients__logo {
-                height: 36px;
-                display: inline-block;
-                margin: 0.75rem;
+            .c-clients__item {
             }
 
-            @media screen and (min-width: 45em) {
                 .c-clients__logo {
-                    height: 48px;
+                    height: 36px;
+                    display: inline-block;
+                    margin: 0.75rem;
                 }
-            }
+
+                @media screen and (min-width: 45em) {
+                    .c-clients__logo {
+                        height: 48px;
+                    }
+                }
 
 
 
@@ -204,7 +207,7 @@
             <div class="o-wrapper">
 
                 <h1>
-                  <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><title>Andy Cochrane</title><g fill="none" fill-rule="evenodd"><path d="M64 0C28.654 0 0 28.653 0 64s28.654 64 64 64c35.346 0 64-28.653 64-64S99.346 0 64 0m0 10c29.775 0 54 24.225 54 54s-24.225 54-54 54-54-24.225-54-54 24.225-54 54-54" fill="#F5F6F7"/><path stroke="#F5F6F7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M40.688 96.58l23.311-71.773L87.313 96.58 64 79.691z"/></g></svg>
+                    <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Andy Cochrane</title><defs><circle id="a" cx="64" cy="64" r="64"/><mask id="b" x="0" y="0" width="128" height="128" fill="#fff"><use xlink:href="#a"/></mask></defs><g stroke="#f5f6f7" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><use mask="url(#b)" stroke-width="20" xlink:href="#a"/><path stroke-width="10" d="M41 96.772L64.312 25l23.313 71.772-23.313-16.888z"/></g></svg>
                 </h1>
 
                 <p class="c-heading-sub">Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
@@ -224,11 +227,21 @@
                 <p>I’ve been lucky enough to work with some amazing people…</p>
 
                 <div class="c-clients">
+                  <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
+                  </a>
+                  <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-arriva.png" class="c-clients__logo" alt="Arriva" />
+                  </a>
+                  <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-easygym.png" class="c-clients__logo" alt="easyGym" />
+                  </a>
+                  <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-ucl.png" class="c-clients__logo" alt="University College London" />
+                  </a>
+                  <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
+                  </a>
                 </div>
 
                 <ul class="c-feature-list">
