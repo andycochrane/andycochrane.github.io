@@ -12,6 +12,7 @@
 
         :root {
             --color-brand: #1b4a4a;
+            --color-brand-light: #d5dede;
             --ratio: 1.5;
         }
 
@@ -90,7 +91,15 @@
             color: var(--color-brand);
         }
 
+        footer {
+            padding-top:    calc(var(--ratio) * 1rem);
+            padding-bottom: calc(var(--ratio) * 1rem);
+            background-color: var(--color-brand-light);
+        }
 
+            footer p {
+                margin-bottom: calc(var(--ratio) * .5rem);
+            }
 
 
 
@@ -204,6 +213,38 @@
             font-style: italic;
         }
 
+
+
+        .c-nav-secondary {
+            text-align: center;
+            list-style: none;
+        }
+
+            .c-nav-secondary__item {
+                display: inline;
+                padding-right: calc((var(--ratio) * 1rem) / 2);
+                padding-left: calc((var(--ratio) * 1rem) / 2);
+            }
+
+                .c-nav-secondary__link {
+
+                }
+
+
+
+        .c-copyright {
+            font-size: .75em;
+        }
+
+
+
+
+
+        /* Utilities */
+
+        .u-mb0 {
+            margin-bottom: 0;
+        }
     </style>
 
     <link rel="shortcut icon" href="/favicon.png" />
@@ -298,8 +339,34 @@
 
     </main>
 
-    <footer id="js-footer">
-        <span>© 2017 Andy Cochrane</span>.
+    <footer id="footer">
+        <div class="o-wrapper">
+            <section>
+                <nav>
+                    <ul class="c-nav-secondary">
+                        <li class="c-nav-secondary__item">
+                            <a href="https://github.com/andycochrane" class="c-nav-secondary__link" target="_blank">Github</a>
+                        </li>
+                        <span> | </span>
+                        <li class="c-nav-secondary__item">
+                            <a href="https://gist.github.com/andycochrane" class="c-nav-secondary__link" target="_blank">Gist</a>
+                        </li>
+                        <span> | </span>
+                        <li class="c-nav-secondary__item">
+                            <a href="https://codepen.io/andycochrane/" class="c-nav-secondary__link" target="_blank">Codepen</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <p>
+                    I'm available for hire. If you would like to get in touch then please <a href="mailto:andycochrane85@gmail.com">fire me an email</a> or <a href="https://twitter.com/ObjectiveAndyC" target="_blank">say hello on Twitter</a>.
+                </p>
+            </section>
+            <section>
+                <p id="copyright">Copyright © 2017 Andy Cochrane.</p>
+            </section>
+        </div>
     </footer>
 
 <script>
@@ -310,12 +377,17 @@ window.onload = function(){
     if (!loadTime) {
       return;
     }
-    var start = loadTime.navigationStart,
-        end = loadTime.loadEventEnd
-        loadTime = (end - start) / 1000;
+    var loadTimeStart = loadTime.navigationStart,
+        loadTimeEnd = loadTime.loadEventEnd
+        loadTime = (loadTimeEnd - loadTimeStart) / 1000;
 
-    var footer = document.getElementById('js-footer');
-    footer.innerHTML += "<span>I like performance. This page loaded in " + loadTime + " seconds</span>";
+    var footer = document.getElementById('footer');
+    var copyright = document.getElementById('copyright');
+    var statsEl = document.createElement('p');
+    statsEl.setAttribute("id", "stats");
+    statsEl.classList.add('u-mb0');
+    statsEl.innerHTML = " This page loaded in " + loadTime + " seconds. Performance matters.";
+    copyright.parentNode.insertBefore(statsEl, copyright.nextSibling);
   }, 0);
 }
 
