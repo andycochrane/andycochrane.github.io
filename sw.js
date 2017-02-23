@@ -1,4 +1,4 @@
-var cacheName = 'andycochrane:0001';
+var cacheName = 'andycochrane:0002';
 var cacheFiles = [
   '/',
   '/assets/img/logo-arriva.png',
@@ -49,7 +49,7 @@ self.addEventListener('fetch', function(event) {
 // Empty out any caches that don’t match the ones listed.
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['andycochrane:0001'];
+  var cacheWhitelist = ['andycochrane:0002'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
