@@ -8,7 +8,7 @@
 
     <style>
 
-        /* SETTINGS*/
+        /* SETTINGS */
 
         :root {
             --color-brand: #1b4a4a;
@@ -94,11 +94,21 @@
         footer {
             padding-top:    calc(var(--ratio) * 1rem);
             padding-bottom: calc(var(--ratio) * 1rem);
-            background-color: var(--color-brand-light);
+            background-color: #333;
+            color: #fff;
         }
 
             footer p {
                 margin-bottom: calc(var(--ratio) * .5rem);
+            }
+
+            footer a {
+                color: #c0c9c9;
+            }
+
+            footer section:last-child {
+                padding-top: calc(var(--ratio) * 1rem);
+                font-size: .75rem;
             }
 
 
@@ -124,9 +134,24 @@
             padding-bottom: calc(var(--ratio) * 1rem);
         }
 
+        @media screen and (min-width: 45em) {
+            .c-band {
+                padding-top:    calc(var(--ratio) * 2rem);
+                padding-bottom: calc(var(--ratio) * 2rem);
+            }
+        }
+
+        .c-band p:last-child {
+            margin-bottom: 0;
+        }
+
         .c-band--dark {
             color: #f5f6f7;
             background-color: #1b4a4a;
+        }
+
+        .c-band--dark a {
+            color: var(--color-brand-light);
         }
 
         /**
@@ -137,6 +162,11 @@
             .c-band--dark {
                 background-color: var(--color-brand);
             }
+        }
+
+        .c-band--tint {
+            color: #333;
+            background-color: #eee;
         }
 
         .c-band--masthead {
@@ -177,13 +207,26 @@
 
         .c-feature-list {
             list-style: none;
-            column-count: 2;
             column-gap: calc(var(--ratio) * 1rem);
         }
 
+        .c-feature-list--small {
+            column-count: 2;
+        }
+
         @media screen and (min-width: 45em) {
-            .c-feature-list {
+            .c-feature-list--small {
                 column-count: 3;
+            }
+        }
+
+        .c-feature-list--large {
+            column-count: 1;
+        }
+
+        @media screen and (min-width: 45em) {
+            .c-feature-list--large {
+                column-count: 2;
             }
         }
 
@@ -227,7 +270,7 @@
             }
 
                 .c-nav-secondary__link {
-
+                    color: #adc8c8;
                 }
 
 
@@ -253,30 +296,84 @@
 </head>
 <body>
 
+    <header class="c-band  c-band--dark  c-band--masthead">
+
+        <div class="o-wrapper">
+
+            <h1 class="c-logo">
+                <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Andy Cochrane</title><defs><circle id="a" cx="64" cy="64" r="64"/><mask id="b" x="0" y="0" width="128" height="128" fill="#fff"><use xlink:href="#a"/></mask></defs><g stroke="#f5f6f7" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><use mask="url(#b)" stroke-width="20" xlink:href="#a"/><path stroke-width="10" d="M41 96.772L64.312 25l23.313 71.772-23.313-16.888z"/></g></svg>
+            </h1>
+
+            <p class="c-heading-sub">Hi there, I’m Andy, a performance-conscious front-end developer from Leeds, UK.</p>
+
+        </div>
+
+    </header>
+
     <main>
 
-        <section class="c-band  c-band--dark  c-band--masthead">
-
+        <section class="c-band">
             <div class="o-wrapper">
-
-                <h1 class="c-logo">
-                    <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Andy Cochrane</title><defs><circle id="a" cx="64" cy="64" r="64"/><mask id="b" x="0" y="0" width="128" height="128" fill="#fff"><use xlink:href="#a"/></mask></defs><g stroke="#f5f6f7" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><use mask="url(#b)" stroke-width="20" xlink:href="#a"/><path stroke-width="10" d="M41 96.772L64.312 25l23.313 71.772-23.313-16.888z"/></g></svg>
-                </h1>
-
-                <p class="c-heading-sub">Hi there, I’m Andy, a performance-led front-end developer from Leeds, UK.</p>
-
+                <h2>A little about me</h2>
+                <p class="u-mb0">In 2015, after several successful years slinging fancy cocktails to the good folk of Leeds, a fortuitous opportunity arose to turn a long-time hobby into my vocation, and it has been full steam ahead ever since. I cut my teeth on over 30 projects, large and small, working alongside and learning from some very clever people. For a bartender-turned-developer, my working day has drastically changed, but the values, principles, keen eye for detail and passion for doing things properly that served me so well in the past are still driving me today.</p>
             </div>
+        </section>
 
+        <section class="c-band  c-band--tint">
+            <div class="o-wrapper">
+                <h2>Skills and Technologies</h2>
+                <p>I have been exposed to and worked with many languages, libraries, frameworks and technologies. Below is a non-exhaustive list of some of these.</p>
+                <ul class="c-feature-list c-feature-list--small">
+                    <li class="c-feature-list__item"><abbr title="HyperText Markup Language">HTML5</abbr></li>
+                    <li class="c-feature-list__item"><abbr title="Sassy Cascading Style Sheets">(S)CSS</abbr></li>
+                    <li class="c-feature-list__item"><abbr title="Javascript">JS</abbr></li>
+                    <li class="c-feature-list__item">JQuery</li>
+                    <li class="c-feature-list__item"><abbr title="PHP: Hypertext Preprocessor">PHP</abbr></li>
+                    <li class="c-feature-list__item"><abbr title="">Git</abbr></li>
+                    <li class="c-feature-list__item">Bash</li>
+                    <li class="c-feature-list__item"><abbr title="Search Engine Optimization">SEO</abbr></li>
+                    <li class="c-feature-list__item"><abbr title="node package manager">npm</abbr></li>
+                    <li class="c-feature-list__item">Bower</li>
+                    <li class="c-feature-list__item">Gulp</li>
+                    <li class="c-feature-list__item">Blade</li>
+                </ul>
+            </div>
         </section>
 
         <section class="c-band">
-
             <div class="o-wrapper">
+                <h2>Coding Methodologies and Principles</h2>
+                <p>I like my code as I like my home: clean, tidy and in order. I adopt and combine several methodologies to create scalable, modular U. I write semantic HTML and use a <abbr title="Cascading Style Sheets">CSS</abbr> class naming convention based on the <abbr title="Blocks, Elements and Modifiers">BEM</abbr> methodology and adapted by <a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">Harry Roberts</a>. I take a leaf from Nicole Sullivan's book by appying <abbr title="Object Oriented CSS">OOCSS</abbr> principles.</p>
+                <ul class="c-feature-list c-feature-list--large">
+                    <li class="c-feature-list__item"><abbr title="Object Oriented Cascading Style Sheets">OOCSS</abbr></li>
+                    <li class="c-feature-list__item"><abbr title="Blocks, Elements and Modifiers: Inverted Triangle">BEMIT</abbr> (BEM + ITCSS)</li>
+                    <li class="c-feature-list__item">Atomic Design</li>
+                    <li class="c-feature-list__item"><abbr title="Don’t Repeat Yourself">DRY</abbr></li>
+                    <li class="c-feature-list__item">Single Responsibility Principle</li>
+                    <li class="c-feature-list__item">Separation of Concerns</li>
+                </ul>
+            </div>
+        </section>
 
+        <section class="c-band  c-band--tint">
+            <div class="o-wrapper">
+                <h2>Best Practices</h2>
+                <p>The web is for everyone, and I want to ensure that the work I produce is as inclusive and accessible as possible. But it is about more than just disabilities. The responsibility is in providing help to all users who face any barriers to using the web. This includes catering for those accessing the web using assistive technologies or on poor networks. The goal is to ensure that everyone can enjoy a positive web experience and get to the information they need. Coding for accessibility is a learning process and I am a fledgling student, but the first step is in being mindful of it.</p>
+                <!-- <ul class="c-feature-list c-feature-list--small">
+                    <li class="c-feature-list__item">Accessibility</li>
+                    <li class="c-feature-list__item">Performance</li>
+                    <li class="c-feature-list__item">Security</li>
+                    <li class="c-feature-list__item">Modular</li>
+                    <li class="c-feature-list__item"></li>
+                    <li class="c-feature-list__item"></li>
+                </ul> -->
+            </div>
+        </section>
+
+        <section class="c-band">
+            <div class="o-wrapper">
                 <h2>Clients</h2>
-
-                <p>I’ve been lucky enough to work with some amazing people…</p>
-
+                <p>I’ve been lucky enough to work with some amazing people on some very exciting projects…</p>
                 <div class="c-clients">
                   <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
@@ -294,11 +391,9 @@
                     <img src="/assets/img/logo-citipark.png" class="c-clients__logo" alt="CitiPark" />
                   </a>
                 </div>
-
-                <ul class="c-feature-list">
+                <ul class="c-feature-list c-feature-list--large">
                     <li class="c-feature-list__item">Active Training Team</li>
                     <li class="c-feature-list__item">Buy Yorkshire</li>
-                    <li class="c-feature-list__item">cap hpi</li>
                     <li class="c-feature-list__item">Cauldron</li>
                     <li class="c-feature-list__item">DTP Group</li>
                     <li class="c-feature-list__item">Hisense</li>
@@ -310,31 +405,15 @@
                     <li class="c-feature-list__item">VTR North</li>
                     <li class="c-feature-list__item">Yorkshire County Cricket Club</li>
                 </ul>
-
             </div>
-
         </section>
 
-        <section class="c-band  c-band--dark">
-
+        <section class="c-band">
             <div class="o-wrapper">
-
-                <h2>Skills and Technologies</h2>
-
-                <ul class="c-feature-list">
-                    <li class="c-feature-list__item">HTML</li>
-                    <li class="c-feature-list__item">(S)CSS</li>
-                    <li class="c-feature-list__item">JS</li>
-                    <li class="c-feature-list__item">PHP</li>
-                    <li class="c-feature-list__item">npm</li>
-                    <li class="c-feature-list__item">Gulp</li>
-                    <li class="c-feature-list__item">Blade</li>
-                    <li class="c-feature-list__item">Git</li>
-                    <li class="c-feature-list__item">More…</li>
+                <h2>Let’s talk</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illum quidem recusandae, ipsum voluptatem vero! Possimus soluta eveniet illo, recusandae eligendi, iste repellat nobis! Vitae, cumque cupiditate magnam perspiciatis, illum voluptatum nesciunt doloribus rerum illo, voluptate quas doloremque, deserunt incidunt.</p>
                 </ul>
-
             </div>
-
         </section>
 
     </main>
@@ -391,17 +470,21 @@ window.onload = function(){
   }, 0);
 }
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            // Successfully registered the Service Worker
-            console.log('Service Worker registration successful with scope: ', registration.scope);
-        }).catch(function(err) {
-            // Failed to register the Service Worker
-            console.log('Service Worker registration failed: ', err);
+if (location.hostname !== 'localhost') {
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                // Successfully registered the Service Worker
+                console.log('Service Worker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+                // Failed to register the Service Worker
+                console.log('Service Worker registration failed: ', err);
+            });
         });
-    });
+    }
 }
+
 
 </script>
 
