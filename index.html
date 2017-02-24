@@ -89,7 +89,7 @@
 
         a {
             color: var(--color-brand);
-            font-weight: bold;
+            font-weight: 500;
         }
 
 
@@ -282,19 +282,25 @@
 
 
 
+        /* SCOPES */
+        @media screen and (min-width: 45em) {
+            .s-content-text {
+                column-count: 2;
+                column-gap: 3rem;
+            }
+        }
+
+
+
         /* UTILITIES */
 
         .u-mb0 {
             margin-bottom: 0;
         }
 
-        @media screen and (min-width: 45em) {
 
-          .u-cols-2\@md {
-            column-count: 2;
-          }
+}
 
-        }
 
     </style>
 
@@ -325,7 +331,12 @@
 
                 <h2>A Little About Me</h2>
 
-                <p class="u-mb0  u-cols-2@md">In 2015, after several successful years slinging fancy cocktails to the good folk of Leeds, a fortuitous opportunity arose to turn a long-time hobby into my vocation, and it has been full steam ahead ever since. I cut my teeth on over 30 projects, large and small, working alongside and learning from some very clever people. For a bartender-turned-developer, my working day has drastically changed, but the values, principles, keen eye for detail, and passion for doing things properly that served me so well in the past are still driving me today.</p>
+                <div class="s-content-text">
+
+                    <p class="u-mb0">In 2015, after several successful years slinging fancy cocktails to the good folk of Leeds, a fortuitous opportunity arose to turn a long-time hobby into my vocation, and it has been full steam ahead ever since. I cut my teeth on over 30 projects, large and small, working alongside and learning from some very clever people. For a bartender-turned-developer, my working day has drastically changed, but the values, principles, keen eye for detail, and passion for doing things properly that served me so well in the past are still driving me today.</p>
+
+                </div>
+
 
             </div>
         </section>
@@ -334,8 +345,9 @@
             <div class="o-wrapper">
 
                 <h2>Skills and Technologies</h2>
-
-                <p class="u-cols-2@md">I have been exposed to and worked with many languages, libraries, frameworks, and technologies. Below is a non-exhaustive list of just a handful of areas in which I am competent.</p>
+                <div class="s-content-text">
+                    <p>I have been exposed to and worked with many languages, libraries, frameworks, and technologies. Below is a non-exhaustive list of just a handful of areas in which I am competent.</p>
+                </div>
 
                 <ul class="c-feature-list c-feature-list--small">
                     <li class="c-feature-list__item"><abbr title="HyperText Markup Language">HTML5</abbr></li>
@@ -360,7 +372,7 @@
 
                 <h2>Coding Methodologies and Principles</h2>
 
-                <p class="u-cols-2@md">I like my code as I like my home: clean, tidy, and in order. I adopt and combine several methodologies to create scalable, modular UIs. I write semantic HTML and use a <abbr title="Cascading Style Sheets">CSS</abbr> class naming convention based on the <abbr title="Blocks, Elements and Modifiers">BEM</abbr> methodology and adapted by <a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">Harry Roberts</a>. I take a leaf from Nicole Sullivan’s book by applying <abbr title="Object Oriented CSS">OOCSS</abbr> principles.</p>
+                <p>I like my code as I like my home: clean, tidy, and in order. I adopt and combine several methodologies to create scalable, modular UIs. I write semantic HTML and use a <abbr title="Cascading Style Sheets">CSS</abbr> class naming convention based on the <abbr title="Blocks, Elements and Modifiers">BEM</abbr> methodology and adapted by <a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">Harry Roberts</a>. I take a leaf from Nicole Sullivan’s book by applying <abbr title="Object Oriented CSS">OOCSS</abbr> principles.</p>
 
                 <ul class="c-feature-list c-feature-list--large">
                     <li class="c-feature-list__item"><abbr title="Object Oriented Cascading Style Sheets">OOCSS</abbr></li>
@@ -377,22 +389,16 @@
         <section class="c-band  c-band--tint">
             <div class="o-wrapper">
                 <h2>Best Practices</h2>
-                <p class="u-cols-2@md">The web is for everyone, and I want to ensure that the work I produce is as inclusive and accessible as possible. But it is about more than just disabilities. The responsibility is in providing help to all users who face any barriers to using the web. This includes catering for those accessing the web using assistive technologies or on poor networks. The goal is to ensure that everyone can enjoy a positive web experience and get to the information they need. Coding for accessibility is a learning process and I am a fledgling student, but the first step is in being mindful of it.</p>
-                <!-- <ul class="c-feature-list c-feature-list--small">
-                    <li class="c-feature-list__item">Accessibility</li>
-                    <li class="c-feature-list__item">Performance</li>
-                    <li class="c-feature-list__item">Security</li>
-                    <li class="c-feature-list__item">Modular</li>
-                    <li class="c-feature-list__item"></li>
-                    <li class="c-feature-list__item"></li>
-                </ul> -->
+                <div class="s-content-text">
+                    <p>The web is for everyone, and I want to ensure that the work I produce is as inclusive and accessible as possible. But it is about more than just disabilities. The responsibility is in providing help to all users who face any barriers to using the web. This includes catering for those accessing the web using assistive technologies or on poor networks. The goal is to ensure that everyone can enjoy a positive web experience and get to the information they need. Coding for accessibility is a learning process and I am a fledgling student, but the first step is in being mindful of it.</p>
+                </div>
             </div>
         </section>
 
         <section class="c-band">
             <div class="o-wrapper">
                 <h2>Clients</h2>
-                <p class="u-cols-2@md">I’ve been lucky enough to work with some amazing people on some very exciting projects…</p>
+                <p>I’ve been lucky enough to work with some amazing people on some very exciting projects…</p>
                 <div class="c-clients">
                   <a href="#0" class="c-clients__link">
                     <img src="/assets/img/logo-ghd.png" class="c-clients__logo" alt="ghd" />
@@ -430,8 +436,9 @@
         <section class="c-band">
             <div class="o-wrapper">
                 <h2>Let’s Talk</h2>
-                <p class="u-cols-2@md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illum quidem recusandae, ipsum voluptatem vero! Possimus soluta eveniet illo, recusandae eligendi, iste repellat nobis! Vitae, cumque cupiditate magnam perspiciatis, illum voluptatum nesciunt doloribus rerum illo, voluptate quas doloremque, deserunt incidunt.</p>
-                </ul>
+                <div class="s-content-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illum quidem recusandae, ipsum voluptatem vero! Possimus soluta eveniet illo, recusandae eligendi, iste repellat nobis! Vitae, cumque cupiditate magnam perspiciatis, illum voluptatum nesciunt doloribus rerum illo, voluptate quas doloremque, deserunt incidunt.</p>
+                </div>
             </div>
         </section>
 
