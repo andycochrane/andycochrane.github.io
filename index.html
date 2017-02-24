@@ -211,10 +211,16 @@
         }
 
         .c-feature-list--small {
-            column-count: 2;
+            column-count: 1;
         }
 
-        @media screen and (min-width: 45em) {
+        @media screen and (min-width: 25em) {
+            .c-feature-list--small {
+                column-count: 2;
+            }
+        }
+
+        @media screen and (min-width: 40em) {
             .c-feature-list--small {
                 column-count: 3;
             }
@@ -224,7 +230,7 @@
             column-count: 1;
         }
 
-        @media screen and (min-width: 45em) {
+        @media screen and (min-width: 40em) {
             .c-feature-list--large {
                 column-count: 2;
             }
