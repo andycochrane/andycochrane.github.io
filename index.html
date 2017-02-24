@@ -89,7 +89,6 @@
 
         a {
             color: var(--color-brand);
-            font-weight: 500;
         }
 
 
@@ -122,10 +121,6 @@
                 padding-top:    calc(var(--ratio) * 2rem);
                 padding-bottom: calc(var(--ratio) * 2rem);
             }
-        }
-
-        .c-band p:last-child {
-            margin-bottom: 0;
         }
 
         .c-band--dark {
@@ -210,10 +205,16 @@
         }
 
         .c-feature-list--small {
-            column-count: 2;
+            column-count: 1;
         }
 
-        @media screen and (min-width: 45em) {
+        @media screen and (min-width: 25em) {
+            .c-feature-list--small {
+                column-count: 2;
+            }
+        }
+
+        @media screen and (min-width: 40em) {
             .c-feature-list--small {
                 column-count: 3;
             }
@@ -223,7 +224,7 @@
             column-count: 1;
         }
 
-        @media screen and (min-width: 45em) {
+        @media screen and (min-width: 40em) {
             .c-feature-list--large {
                 column-count: 2;
             }
@@ -237,7 +238,7 @@
             .c-feature-list__item {
                 display: inline-block; /* [1] */
                 width: 100%; /* [1] */
-                padding: 12px 0;
+                padding: .75rem 0;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
 
@@ -253,6 +254,54 @@
             line-height: 1.333333333;
             font-family: Palatino, Georgia, serif;
             font-style: italic;
+        }
+
+
+
+        .c-strength {
+            background-size: 2.5rem 1rem;
+            background-position: right .75rem top 1rem;
+            background-repeat: no-repeat;
+        }
+
+        .c-strength--one {
+            background-image: linear-gradient(to right, #777 10%, #ddd 10%);
+        }
+
+        .c-strength--two {
+            background-image: linear-gradient(to right, #777 20%, #ddd 20%);
+        }
+
+        .c-strength--three {
+            background-image: linear-gradient(to right, #777 30%, #ddd 30%);
+        }
+
+        .c-strength--four {
+            background-image: linear-gradient(to right, #777 40%, #ddd 40%);
+        }
+
+        .c-strength--five {
+            background-image: linear-gradient(to right, #777 50%, #ddd 50%);
+        }
+
+        .c-strength--six {
+            background-image: linear-gradient(to right, #777 60%, #ddd 60%);
+        }
+
+        .c-strength--seven {
+            background-image: linear-gradient(to right, #777 70%, #ddd 70%);
+        }
+
+        .c-strength--eight {
+            background-image: linear-gradient(to right, #777 80%, #ddd 80%);
+        }
+
+        .c-strength--nine {
+            background-image: linear-gradient(to right, #777 90%, #ddd 90%);
+        }
+
+        .c-strength--ten {
+            background-image: linear-gradient(to right, #777 100%, #ddd 100%);
         }
 
 
@@ -311,69 +360,49 @@
 <body>
 
     <header class="c-band  c-band--dark  c-band--masthead">
-
         <div class="o-wrapper">
-
             <h1 class="c-logo">
                 <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Andy Cochrane</title><defs><circle id="a" cx="64" cy="64" r="64"/><mask id="b" x="0" y="0" width="128" height="128" fill="#fff"><use xlink:href="#a"/></mask></defs><g stroke="#f5f6f7" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><use mask="url(#b)" stroke-width="20" xlink:href="#a"/><path stroke-width="10" d="M41 96.772L64.312 25l23.313 71.772-23.313-16.888z"/></g></svg>
             </h1>
-
             <p class="c-heading-sub">Hi there, I’m Andy, a performance-conscious front-end developer from Leeds, UK.</p>
-
         </div>
-
     </header>
 
     <main>
-
         <section class="c-band">
             <div class="o-wrapper">
-
                 <h2>A Little About Me</h2>
-
                 <div class="s-content-text">
-
                     <p class="u-mb0">In 2015, after several successful years slinging fancy cocktails to the good folk of Leeds, a fortuitous opportunity arose to turn a long-time hobby into my vocation, and it has been full steam ahead ever since. I cut my teeth on over 30 projects, large and small, working alongside and learning from some very clever people. For a bartender-turned-developer, my working day has drastically changed, but the values, principles, keen eye for detail, and passion for doing things properly that served me so well in the past are still driving me today.</p>
-
                 </div>
-
-
             </div>
         </section>
 
         <section class="c-band  c-band--tint">
             <div class="o-wrapper">
-
-                <h2>Skills and Technologies</h2>
-                <div class="s-content-text">
-                    <p>I have been exposed to and worked with many languages, libraries, frameworks, and technologies. Below is a non-exhaustive list of just a handful of areas in which I am competent.</p>
-                </div>
-
+                <h2>Skills and Tools</h2>
+                <p>I have been exposed to and worked with many languages, libraries, frameworks, and tools. Below is a non-exhaustive list of just a handful of areas in which I am competent.</p>
                 <ul class="c-feature-list c-feature-list--small">
-                    <li class="c-feature-list__item"><abbr title="HyperText Markup Language">HTML5</abbr></li>
-                    <li class="c-feature-list__item"><abbr title="Sassy Cascading Style Sheets">(S)CSS</abbr></li>
-                    <li class="c-feature-list__item"><abbr title="Javascript">JS</abbr></li>
-                    <li class="c-feature-list__item">JQuery</li>
-                    <li class="c-feature-list__item"><abbr title="PHP: Hypertext Preprocessor">PHP</abbr></li>
-                    <li class="c-feature-list__item"><abbr title="">Git</abbr></li>
-                    <li class="c-feature-list__item">Bash</li>
-                    <li class="c-feature-list__item"><abbr title="Search Engine Optimization">SEO</abbr></li>
-                    <li class="c-feature-list__item"><abbr title="node package manager">npm</abbr></li>
-                    <li class="c-feature-list__item">Bower</li>
-                    <li class="c-feature-list__item">Gulp</li>
-                    <li class="c-feature-list__item">Blade</li>
+                    <li class="c-feature-list__item c-strength c-strength--eight" title="Strength: 8"><abbr title="HyperText Markup Language">HTML5</abbr></li>
+                    <li class="c-feature-list__item c-strength c-strength--seven" title="Strength: 7"><abbr title="Sassy Cascading Style Sheets">(S)CSS</abbr></li>
+                    <li class="c-feature-list__item c-strength c-strength--two" title="Strength: 2"><abbr title="Javascript">JS</abbr></li>
+                    <li class="c-feature-list__item c-strength c-strength--four" title="Strength: 4">JQuery</li>
+                    <li class="c-feature-list__item c-strength c-strength--two" title="Strength: 2"><abbr title="PHP: Hypertext Preprocessor">PHP</abbr></li>
+                    <li class="c-feature-list__item c-strength c-strength--three" title="Strength: 3">Git</li>
+                    <li class="c-feature-list__item c-strength c-strength--three" title="Strength: 3">Bash</li>
+                    <li class="c-feature-list__item c-strength c-strength--four" title="Strength: 4"><abbr title="Search Engine Optimization">SEO</abbr></li>
+                    <li class="c-feature-list__item c-strength c-strength--three" title="Strength: 3"><abbr title="node package manager">npm</abbr></li>
+                    <li class="c-feature-list__item c-strength c-strength--three" title="Strength: 3">Bower</li>
+                    <li class="c-feature-list__item c-strength c-strength--four" title="Strength: 4">Gulp</li>
+                    <li class="c-feature-list__item c-strength c-strength--six" title="Strength: 6">Blade</li>
                 </ul>
-
             </div>
         </section>
 
         <section class="c-band">
             <div class="o-wrapper">
-
                 <h2>Coding Methodologies and Principles</h2>
-
-                <p>I like my code as I like my home: clean, tidy, and in order. I adopt and combine several methodologies to create scalable, modular UIs. I write semantic HTML and use a <abbr title="Cascading Style Sheets">CSS</abbr> class naming convention based on the <abbr title="Blocks, Elements and Modifiers">BEM</abbr> methodology and adapted by <a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">Harry Roberts</a>. I take a leaf from Nicole Sullivan’s book by applying <abbr title="Object Oriented CSS">OOCSS</abbr> principles.</p>
-
+                <p>Like my home, I keep my code clean, tidy and in order. I incorporate the best of several CSS methodologies and coding principles to create scalable, modular UIs for websites and web apps.</p>
                 <ul class="c-feature-list c-feature-list--large">
                     <li class="c-feature-list__item"><abbr title="Object Oriented Cascading Style Sheets">OOCSS</abbr></li>
                     <li class="c-feature-list__item"><abbr title="Blocks, Elements and Modifiers: Inverted Triangle">BEMIT</abbr> (BEM + ITCSS)</li>
@@ -382,7 +411,6 @@
                     <li class="c-feature-list__item">Single Responsibility Principle</li>
                     <li class="c-feature-list__item">Separation of Concerns</li>
                 </ul>
-
             </div>
         </section>
 
@@ -390,7 +418,8 @@
             <div class="o-wrapper">
                 <h2>Best Practices</h2>
                 <div class="s-content-text">
-                    <p>The web is for everyone, and I want to ensure that the work I produce is as inclusive and accessible as possible. But it is about more than just disabilities. The responsibility is in providing help to all users who face any barriers to using the web. This includes catering for those accessing the web using assistive technologies or on poor networks. The goal is to ensure that everyone can enjoy a positive web experience and get to the information they need. Coding for accessibility is a learning process and I am a fledgling student, but the first step is in being mindful of it.</p>
+                    <p>The web is for everyone and it should work for everyone. I want to ensure that the work I produce is as inclusive and accessible as possible. But accessibility is about more than just screen readers. Users can face any number of barriers to using the web and it’s my job to try and break those down.</p>
+                    <p>My objective is to create device-agnostic, cross-browser compatible UIs, using progressive enhancement and standards-compliant code to provide a ensure a positive online experience for as many users as possible.</p>
                 </div>
             </div>
         </section>
@@ -435,13 +464,10 @@
 
         <section class="c-band">
             <div class="o-wrapper">
-                <h2>Let’s Talk</h2>
-                <div class="s-content-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illum quidem recusandae, ipsum voluptatem vero! Possimus soluta eveniet illo, recusandae eligendi, iste repellat nobis! Vitae, cumque cupiditate magnam perspiciatis, illum voluptatum nesciunt doloribus rerum illo, voluptate quas doloremque, deserunt incidunt.</p>
-                </div>
+                <h2>Let’s talk</h2>
+                <p>If you think I’d make a good addition to your team, drop me a line. It’d be great to hear from you.</p>
             </div>
         </section>
-
     </main>
 
     <footer class="c-band--footer" id="footer">
