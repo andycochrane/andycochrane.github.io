@@ -98,7 +98,15 @@
         /* OBJECTS */
 
         .o-wrapper {
-            max-width: 70em;
+            max-width: 53.75em;
+            padding-right: calc(var(--ratio) * 1rem);
+            padding-left:  calc(var(--ratio) * 1rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .o-wrapper--main {
+            max-width: 45em;
             padding-right: calc(var(--ratio) * 1rem);
             padding-left:  calc(var(--ratio) * 1rem);
             margin-right: auto;
@@ -332,24 +340,14 @@
 
 
         /* SCOPES */
-        @media screen and (min-width: 45em) {
-            .s-content-text {
-                column-count: 2;
-                column-gap: 3rem;
-            }
-        }
 
 
 
         /* UTILITIES */
 
-        .u-mb0 {
-            margin-bottom: 0;
-        }
 
 
 }
-
 
     </style>
 
@@ -370,16 +368,15 @@
 
     <main>
         <section class="c-band">
-            <div class="o-wrapper">
+            <div class="o-wrapper o-wrapper--main">
                 <h2>A Little About Me</h2>
-                <div class="s-content-text">
-                    <p class="u-mb0">In 2015, after several successful years slinging fancy cocktails to the good folk of Leeds, a fortuitous opportunity arose to turn a long-time hobby into my vocation, and it has been full steam ahead ever since. I cut my teeth on over 30 projects, large and small, working alongside and learning from some very clever people. For a bartender-turned-developer, my working day has drastically changed, but the values, principles, keen eye for detail, and passion for doing things properly that served me so well in the past are still driving me today.</p>
-                </div>
+                <p>In 2015, after several successful years slinging fancy cocktails to the good folk of Leeds, a fortuitous opportunity arose to turn a long-time hobby into my vocation, and it has been full steam ahead ever since. I cut my teeth on over 30 projects, large and small, working alongside and learning from some very clever people.</p>
+                <p>For a bartender-turned-developer, my working day has drastically changed, but the values, principles, keen eye for detail, and passion for doing things properly that served me so well in the past are still driving me today.</p>
             </div>
         </section>
 
         <section class="c-band  c-band--tint">
-            <div class="o-wrapper">
+            <div class="o-wrapper o-wrapper--main">
                 <h2>Skills and Tools</h2>
                 <p>I have been exposed to and worked with many languages, libraries, frameworks, and tools. Below is a non-exhaustive list of just a handful of areas in which I am competent.</p>
                 <ul class="c-feature-list c-feature-list--small">
@@ -400,7 +397,7 @@
         </section>
 
         <section class="c-band">
-            <div class="o-wrapper">
+            <div class="o-wrapper o-wrapper--main">
                 <h2>Coding Methodologies and Principles</h2>
                 <p>Like my home, I keep my code clean, tidy and in order. I incorporate the best of several CSS methodologies and coding principles to create scalable, modular UIs for websites and web apps.</p>
                 <ul class="c-feature-list c-feature-list--large">
@@ -415,17 +412,15 @@
         </section>
 
         <section class="c-band  c-band--tint">
-            <div class="o-wrapper">
+            <div class="o-wrapper o-wrapper--main">
                 <h2>Best Practices</h2>
-                <div class="s-content-text">
-                    <p>The web is for everyone and it should work for everyone. I want to ensure that the work I produce is as inclusive and accessible as possible. But accessibility is about more than just screen readers. Users can face any number of barriers to using the web and it’s my job to try and break those down.</p>
-                    <p>My objective is to create device-agnostic, cross-browser compatible UIs, using progressive enhancement and standards-compliant code to provide a ensure a positive online experience for as many users as possible.</p>
-                </div>
+                <p>The web is for everyone and it should work for everyone. I want to ensure that the work I produce is as inclusive and accessible as possible. But accessibility is about more than just screen readers. Users can face any number of barriers to using the web and it’s my job to try and break those down.</p>
+                <p>My objective is to create device-agnostic, cross-browser compatible UIs, using progressive enhancement and standards-compliant code to provide a positive online experience for as many users as possible.</p>
             </div>
         </section>
 
         <section class="c-band">
-            <div class="o-wrapper">
+            <div class="o-wrapper o-wrapper--main">
                 <h2>Clients</h2>
                 <p>I’ve been lucky enough to work with some amazing people on some very exciting projects…</p>
                 <div class="c-clients">
@@ -463,7 +458,7 @@
         </section>
 
         <section class="c-band">
-            <div class="o-wrapper">
+            <div class="o-wrapper o-wrapper--main">
                 <h2>Let’s talk</h2>
                 <p>If you think I’d make a good addition to your team, drop me a line. It’d be great to hear from you.</p>
             </div>
@@ -516,7 +511,6 @@ window.onload = function(){
     var copyright = document.getElementById('copyright');
     var statsEl = document.createElement('p');
     statsEl.setAttribute("id", "stats");
-    statsEl.classList.add('u-mb0');
     statsEl.innerHTML = " <small>This page loaded in " + loadTime + " seconds. Performance matters.</small>";
     copyright.parentNode.insertBefore(statsEl, copyright.nextSibling);
   }, 0);
