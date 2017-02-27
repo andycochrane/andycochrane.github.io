@@ -302,7 +302,13 @@
 
         /* UTILITIES */
 
+        .u-hide {
+            display: none;
+        }
 
+        .u-hide:target {
+            display: block;
+        }
 
 }
 
@@ -449,6 +455,10 @@
             <section>
                 <p id="copyright"><small>Copyright © 2017 Andy Cochrane.</small></p>
             </section>
+            <section class="c-band u-hide" id="performance">
+                <h4>How does this page load so fast?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dolores provident sunt non quos vitae, enim consequatur fugit beatae, veritatis exercitationem ex molestias. Explicabo culpa mollitia placeat, saepe consectetur perferendis temporibus ut. Quidem, tempore cumque suscipit, assumenda quibusdam itaque cupiditate.</p>
+            </section>
         </div>
     </footer>
 
@@ -468,7 +478,7 @@ window.onload = function(){
     var copyright = document.getElementById('copyright');
     var statsEl = document.createElement('p');
     statsEl.setAttribute("id", "stats");
-    statsEl.innerHTML = " <small>This page loaded in " + loadTime + " seconds. Performance matters.</small>";
+    statsEl.innerHTML = " <small>This page loaded in " + loadTime + " seconds. <a href=#performance>Performance matters.</a></small>";
     copyright.parentNode.insertBefore(statsEl, copyright.nextSibling);
   }, 0);
 }
