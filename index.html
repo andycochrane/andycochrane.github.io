@@ -277,9 +277,30 @@
         }
 
             .c-nav-secondary__item {
-                display: inline;
+                position: relative;
+                display: inline-block;
                 padding-right: calc((var(--ratio) * 1rem) / 2);
                 padding-left: calc((var(--ratio) * 1rem) / 2);
+            }
+
+            .c-nav-secondary__item + .c-nav-secondary__item {
+                margin-left: -.2779em;
+            }
+
+            .c-nav-secondary__item:after {
+                content: '|';
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(50%);
+            }
+
+
+            /**
+             * Last child selector no worky in IE8 and earlier
+             */
+            .c-nav-secondary__item:last-child:after {
+                content: '';
             }
 
                 .c-nav-secondary__link {
@@ -420,13 +441,11 @@
                         <li class="c-nav-secondary__item">
                             <a href="https://github.com/andycochrane" class="c-nav-secondary__link" target="_blank" rel="noopener">Github</a>
                         </li>
-                        <span> | </span>
                         <li class="c-nav-secondary__item">
                             <a href="https://gist.github.com/andycochrane" class="c-nav-secondary__link" target="_blank" rel="noopener">Gist</a>
                         </li>
-                        <span> | </span>
                         <li class="c-nav-secondary__item">
-                            <a href="https://codepen.io/andycochrane/" class="c-nav-secondary__link" target="_blank" rel="noopener">Codepen</a>
+                            <a href="https://codepen.io/andycochrane" class="c-nav-secondary__link" target="_blank" rel="noopener">Codepen</a>
                         </li>
                     </ul>
                 </nav>
