@@ -39,7 +39,8 @@
         p,
         ul, ol, dl,
         .c-clients {
-            margin-bottom: calc(var(--ratio) * 1rem);
+            margin-bottom: 1.5rem;
+            margin-bottom: calc(var(--ratio) * 1rem); /* Try Custom Property */
         }
 
 
@@ -51,7 +52,8 @@
         html {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             font-size: 100%;
-            line-height: var(--ratio);
+            line-height: 1.5;
+            line-height: var(--ratio);  /* Try Custom Property */
             min-height: 100%;
             overflow-y: scroll;
             background-color: #f5f6f7;
@@ -91,7 +93,8 @@
         }
 
         a {
-            color: var(--color-brand);
+            color: #1b4a4a;
+            color: var(--color-brand); /* Try Custom Property */
             font-weight: 500;
             text-decoration: none;
         }
@@ -110,16 +113,20 @@
 
         .o-wrapper {
             max-width: 53.75em;
-            padding-right: calc(var(--ratio) * 1rem);
-            padding-left:  calc(var(--ratio) * 1rem);
+            padding-right: 1.5rem;
+            padding-right: calc(var(--ratio) * 1rem); /* Try Custom Property */
+            padding-left: 1.5rem;
+            padding-left:  calc(var(--ratio) * 1rem); /* Try Custom Property */
             margin-right: auto;
             margin-left: auto;
         }
 
         .o-wrapper--main {
             max-width: 45em;
-            padding-right: calc(var(--ratio) * 1rem);
-            padding-left:  calc(var(--ratio) * 1rem);
+            padding-right: 1.5rem;
+            padding-right: calc(var(--ratio) * 1rem); /* Try Custom Property */
+            padding-left: 1.5rem;
+            padding-left:  calc(var(--ratio) * 1rem); /* Try Custom Property */
             margin-right: auto;
             margin-left: auto;
         }
@@ -131,24 +138,30 @@
         /* COMPONENTS */
 
         .c-band {
-            padding-top:    calc(var(--ratio) * 1rem);
-            padding-bottom: calc(var(--ratio) * 1rem);
+            padding-top: 1.5rem;
+            padding-top: calc(var(--ratio) * 1rem); /* Try Custom Property */
+            padding-bottom: 1.5rem;
+            padding-bottom: calc(var(--ratio) * 1rem); /* Try Custom Property */
         }
 
         @media screen and (min-width: 45em) {
             .c-band {
-                padding-top:    calc(var(--ratio) * 2rem);
-                padding-bottom: calc(var(--ratio) * 2rem);
+                padding-top: 3rem;
+                padding-top: calc(var(--ratio) * 2rem); /* Try Custom Property */
+                padding-bottom: 3rem;
+                padding-bottom: calc(var(--ratio) * 2rem); /* Try Custom Property */
             }
         }
 
         .c-band--dark {
             color: #f5f6f7;
             background-color: #1b4a4a;
+            background-color: var(--color-brand); /* Try Custom Property */
         }
 
         .c-band--dark a {
-            color: var(--color-brand-light);
+            color: #d5dede;
+            color: var(--color-brand-light); /* Try Custom Property */
         }
 
         /**
@@ -157,7 +170,8 @@
          */
         @supports (--foo: bar) {
             .c-band--dark {
-                background-color: var(--color-brand);
+                background-color: #1b4a4a;
+                background-color: var(--color-brand); /* Try Custom Property */
             }
         }
 
@@ -167,21 +181,26 @@
         }
 
         .c-band--masthead {
-            padding-top: calc(var(--ratio) * 2rem);
-            padding-bottom: calc(var(--ratio) * 2rem);
+            padding-top: 3rem;
+            padding-top: calc(var(--ratio) * 2rem); /* Try Custom Property */
+            padding-bottom: 3rem;
+            padding-bottom: calc(var(--ratio) * 2rem); /* Try Custom Property */
             text-align: center;
         }
 
         .c-band--footer {
-            padding-top:    calc(var(--ratio) * 1rem);
-            padding-bottom: calc(var(--ratio) * 1rem);
+            padding-top: 1.5rem;
+            padding-top: calc(var(--ratio) * 1rem); /* Try Custom Property */
+            padding-bottom: 1.5rem;
+            padding-bottom: calc(var(--ratio) * 1rem); /* Try Custom Property */
             background-color: #333;
             color: #fff;
             text-align: center;
         }
 
             .c-band--footer p {
-                margin-bottom: calc(var(--ratio) * .5rem);
+                margin-bottom: .75rem;
+                margin-bottom: calc((var(--ratio) * 1rem) / 2); /* Try Custom Property */
             }
 
             .c-band--footer a {
@@ -191,7 +210,8 @@
 
 
         .c-logo {
-            margin-bottom: calc(var(--ratio) * 2rem);
+            margin-bottom: 3rem;
+            margin-bottom: calc(var(--ratio) * 2rem); /* Try Custom Property */
         }
 
 
@@ -207,7 +227,8 @@
                 .c-clients__logo {
                     height: 36px;
                     display: inline-block;
-                    margin: 0.75rem;
+                    margin: .75rem;
+                    margin: calc((var(--ratio) * 1rem) / 2); /* Try Custom Property */
                 }
 
                 @media screen and (min-width: 45em) {
@@ -220,7 +241,8 @@
 
         .c-feature-list {
             list-style: none;
-            column-gap: calc(var(--ratio) * 1rem);
+            column-gap: 1.5rem;
+            column-gap: calc(var(--ratio) * 1rem); /* Try Custom Property */
         }
 
         .c-feature-list--small {
@@ -252,6 +274,7 @@
                 display: inline-block; /* [1] */
                 width: 100%; /* [1] */
                 padding: .75rem 0;
+                padding: calc((var(--ratio) * 1rem) / 2) 0; /* Try Custom Property */
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
 
@@ -279,8 +302,10 @@
             .c-nav-secondary__item {
                 position: relative;
                 display: inline-block;
-                padding-right: calc((var(--ratio) * 1rem) / 2);
-                padding-left: calc((var(--ratio) * 1rem) / 2);
+                padding-right: .75rem;
+                padding-right: calc((var(--ratio) * 1rem) / 2); /* Try Custom Property */
+                padding-left: .75rem;
+                padding-left: calc((var(--ratio) * 1rem) / 2); /* Try Custom Property */
             }
 
             .c-nav-secondary__item:after {
