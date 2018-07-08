@@ -1,2 +1,2 @@
-# analogue-andy.github.io
-Andy Cochrane personal site.
+# andycochrane.github.io
+Andy Cochrane's personal site.
